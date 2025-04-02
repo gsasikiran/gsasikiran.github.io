@@ -8,7 +8,6 @@ import LinkButton from "@/components/LinkButton.astro";
 import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
-import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
@@ -30,7 +29,9 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
 
       <p>
         This is my personal website, where I share my thoughts, projects, and
-        experiences.
+        experiences. I am more of an AI utopian than a dystopian. You can find why
+        in this
+        <a href="/blog/ai-rise-might-not-lead-to-fascism">blog</a>.
       </p>
 
       <p>
