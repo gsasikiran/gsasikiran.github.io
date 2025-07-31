@@ -29,14 +29,10 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       </h1>
 
       <p>
-        This is my personal website, where I share my thoughts, projects, and
-        experiences.
-      </p>
+I am currently working as a Doctoral researcher at <a href="https://www.tib.eu/de/">TIB Hannover</a> in the domains of AI for science and LLM reasoning. I have previously worked at <a href="https://www.ensun.io/">ensun Gmbh</a> as a full-time data scientist.
 
-      <p>
-        The website template is from
-        <a href="https://github.com/satnaing/astro-paper">GitHub of Sat Naing</a>.
-    </p>
+In my free time, I love watching chess and movies (with full of ideas). I also enjoy seeking new thoughts.
+      </p>
 
       {
         // only display if at least one social link is enabled
@@ -89,6 +85,12 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     </div>
   </main>
   <Footer />
+  <div class="my-8 text-center text-sm text-gray-500">
+        The website template is from
+        <a href="https://github.com/satnaing/astro-paper" target="_blank" rel="noopener noreferrer">
+        GitHub of Sat Naing
+        </a>.
+  </div>
 </Layout>
 
 <script>

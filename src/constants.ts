@@ -2,6 +2,7 @@ import IconMail from "@/assets/icons/IconMail.svg";
 import IconGitHub from "@/assets/icons/IconGitHub.svg";
 import IconBrandX from "@/assets/icons/IconBrandX.svg";
 import IconLinkedin from "@/assets/icons/IconLinkedin.svg";
+import IconGoogleScholar from "@/assets/icons/IconGoogleScholar.svg";
 import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
@@ -10,10 +11,10 @@ import { SITE } from "@/config";
 
 export const SOCIALS = [
   {
-    name: "Github",
-    href: "https://github.com/gsasikiran",
-    linkTitle: ` ${SITE.title} on Github`,
-    icon: IconGitHub,
+    name: "Google Scholar",
+    href: "https://scholar.google.com/citations?user=Xel2nf4AAAAJ&hl=en&authuser=1",
+    linkTitle: `${SITE.title} on Google Scholar`,
+    icon: IconGoogleScholar,
   },
   {
     name: "LinkedIn",
@@ -21,7 +22,12 @@ export const SOCIALS = [
     linkTitle: `${SITE.title} on LinkedIn`,
     icon: IconLinkedin,
   },
-  
+  {
+    name: "Github",
+    href: "https://github.com/gsasikiran",
+    linkTitle: ` ${SITE.title} on Github`,
+    icon: IconGitHub,
+  },
 ] as const;
 
 export const SHARE_LINKS = [

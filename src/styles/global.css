@@ -44,6 +44,9 @@ html[data-theme="dark"] {
   button {
     @apply outline-offset-1 outline-accent focus-visible:no-underline focus-visible:outline-2 focus-visible:outline-dashed;
   }
+  a {
+    @apply underline inline-block transition-transform duration-200 ease-in-out hover:scale-105;
+  }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
