@@ -14,14 +14,14 @@ const { title, description, pubDatetime, modDatetime, timezone } = data;
 
 const headerProps = {
   style: { viewTransitionName: slugifyStr(title) },
-  class: "text-lg font-medium decoration-dashed hover:underline",
+  class: "text-lg font-medium decoration-dashed group-hover:underline",
 };
 ---
 
-<li class="my-6">
+<li class="group my-6 p-4 bg-background rounded-lg shadow-md transition-all duration-200 ease-in-out hover:shadow-xl hover:scale-105">
   <a
     href={getPath(id, filePath)}
-    class="inline-block text-lg font-medium text-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+    class="block w-full h-full no-underline focus-visible:no-underline focus-visible:underline-offset-0"
   >
     {
       variant === "h2" ? (
@@ -30,7 +30,7 @@ const headerProps = {
         <h3 {...headerProps}>{title}</h3>
       )
     }
+    <Datetime {pubDatetime} {modDatetime} {timezone} />
+    <p>{description}</p>
   </a>
-  <Datetime {pubDatetime} {modDatetime} {timezone} />
-  <p>{description}</p>
 </li>
