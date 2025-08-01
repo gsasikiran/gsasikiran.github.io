@@ -22,20 +22,7 @@ export default defineConfig({
     },
   },
   vite: {
-    plugins: [tailwindcss({
-      config: {
-        content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Lato", "sans-serif"],
-              serif: ["Merriweather", "serif"],
-            },
-          },
-        },
-        plugins: [require("@tailwindcss/typography")],
-      }
-    })],
+    plugins: [tailwindcss()],
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"],
     },
