@@ -2,7 +2,7 @@ export const SITE = {
   website: "https://gsasikiran.github.io", // replace this with your deployed domain
   author: "Sasi Kiran Gaddipati",
   profile: "https://gsasikiran.github.io",
-  desc: "Personal website of Sasi Kiran Gaddipati",
+  desc: "Sasi Kiran Gaddipati's personal website and blog. Explore articles on artificial intelligence, AI for science and other technology topics.",
   title: "Sasi Kiran Gaddipati",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
