@@ -4,8 +4,8 @@ pubDatetime: 2025-03-26T15:22:00Z
 modDatetime: 2025-03-26T06:25:46.734Z
 title: Test Blog - Adding new posts in AstroPaper theme
 slug: adding-new-posts-in-astropaper-theme
-featured: true
-draft: false
+featured: false
+draft: true
 tags:
   - docs
 description:

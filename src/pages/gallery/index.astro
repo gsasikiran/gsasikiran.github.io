@@ -1,0 +1,27 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { SITE } from "@/config";
+import GalleryItem from "@/components/GalleryItem.astro";
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/gallery/*.{png,jpg,jpeg}",
+  { eager: true }
+);
+---
+
+<Layout title={`Gallery | ${SITE.title}`}>
+  <main class="p-4">
+    <h1 class="text-3xl font-bold mb-4">Gallery</h1>
+    {Object.keys(images).length > 0 ? (
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        {Object.values(images).map(image => (
+          <GalleryItem src={image.default.src} alt="" />
+        ))}
+      </div>
+    ) : (
+      <p>
+        No images found in the gallery. Add your images (png, jpg, jpeg) to the <code>src/assets/gallery</code> folder.
+      </p>
+    )}
+  </main>
+</Layout>
