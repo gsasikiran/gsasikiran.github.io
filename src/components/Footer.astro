@@ -14,13 +14,16 @@ const { noMarginTop = false } = Astro.props;
 <footer class:list={["w-full", { "mt-auto": !noMarginTop }]}>
   <Hr noPadding />
   <div
-    class="flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4"
+    class="flex flex-col items-center justify-between py-5 sm:flex-row-reverse sm:py-4"
   >
     <Socials centered />
-    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row">
+    <div class="my-2 flex flex-col items-center whitespace-nowrap sm:flex-row sm:items-center gap-x-1">
       <span>Copyright &#169; {currentYear}</span>
       <span class="hidden sm:inline">&nbsp;|&nbsp;</span>
       <span>All rights reserved.</span>
     </div>
+  </div>
+  <div class="pb-4 text-center text-xs text-foreground/40">
+    Built with <a href="https://github.com/satnaing/astro-paper" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition-colors duration-200">AstroPaper</a> by Sat Naing.
   </div>
 </footer>
