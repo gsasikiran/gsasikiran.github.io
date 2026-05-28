@@ -1,0 +1,61 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+
+const projects = [
+  {
+    title: "The Real-World Curriculum",
+    description:
+      "A practical education resource covering skills rarely taught in school — from emergency response and personal finance to digital safety, mental health, and career literacy. Structured from beginner to advanced.",
+    url: "https://gsasikiran.github.io/The-Real-World-Cirriculum/",
+    tags: ["Education", "Life Skills", "Open Source"],
+  },
+];
+---
+
+<Layout title={`Projects | ${SITE.title}`}>
+  <Header />
+  <main id="main-content" class="mb-auto mx-auto w-full max-w-3xl px-4">
+    <section class="mb-12">
+      <h1 class="text-4xl font-bold mb-3">Projects</h1>
+      <p class="text-lg text-foreground/80">
+        A collection of projects I have built or contributed to.
+      </p>
+    </section>
+
+    <ul>
+      {projects.map(project => (
+        <li class="group my-5 rounded-xl border border-border/60 bg-card-background p-5 shadow-sm transition-all duration-200 ease-in-out hover:shadow-md hover:-translate-y-0.5 hover:border-accent/40">
+          <a
+            href={project.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block w-full h-full no-underline"
+          >
+            <h2 class="text-lg font-medium decoration-dashed group-hover:underline group-hover:text-accent transition-colors duration-200">
+              {project.title}
+            </h2>
+            <p class="mt-2 text-sm text-foreground/75 leading-relaxed">
+              {project.description}
+            </p>
+            {project.tags.length > 0 && (
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                {project.tags.map(tag => (
+                  <span class="inline-block rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent/90 border border-accent/20">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+            <span class="mt-3 inline-block text-xs text-accent/70 hover:text-accent transition-colors">
+              {project.url} ↗
+            </span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </main>
+  <Footer />
+</Layout>
