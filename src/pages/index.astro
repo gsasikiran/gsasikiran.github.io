@@ -9,7 +9,7 @@ import Card from "@/components/Card.astro";
 import Hr from "@/components/Hr.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
-import { SOCIALS } from "@/constants";
+import { SOCIALS, PROJECTS } from "@/constants";
 
 const posts = await getCollection("blog");
 
@@ -27,11 +27,15 @@ const blogPosts = sortedPosts.filter(({ data }) => !data.tags || !data.tags.incl
       </h1>
 
       <p class="leading-relaxed text-lg text-foreground/90">
-        I am currently working as a Doctoral researcher at <a href="https://www.tib.eu/de/" class="text-accent hover:underline">TIB Hannover</a> in the domains of <strong>AI for science</strong> and <strong>LLM reasoning</strong>. I have previously worked at <a href="https://www.ensun.io/" class="text-accent hover:underline">ensun Gmbh</a> as a full-time data scientist.
+        I'm <strong>Sasi Kiran Gaddipati</strong> — a Doctoral Researcher at <a href="https://www.tib.eu/de/" class="text-accent hover:underline">TIB Hannover</a>, working on <strong>AI for science</strong> and <strong>LLM reasoning</strong>. My research focuses on building systems that support scientific discovery: from human-AI collaborative research workflows to benchmarking autonomous AI systems on machine learning reproducibility.
       </p>
 
       <p class="mt-3 leading-relaxed text-foreground/85">
-        In my free time, I love watching chess and movies. I also enjoy seeking new thoughts and exploring emerging ideas in AI and scientific discovery.
+        Previously, I worked as a Data Scientist at <a href="https://www.ensun.io/" class="text-accent hover:underline">ensun GmbH</a>, applying NLP and machine learning to industry-scale problems.
+      </p>
+
+      <p class="mt-3 leading-relaxed text-foreground/80">
+        On this site you'll find my research publications, technical write-ups, and thoughts on AI, LLMs, and the future of scientific discovery. When I'm not working, I enjoy watching chess and films, and following new ideas at the edge of AI and science.
       </p>
 
       {
@@ -82,6 +86,50 @@ const blogPosts = sortedPosts.filter(({ data }) => !data.tags || !data.tags.incl
           <ul>
             {blogPosts.slice(0, 2).map(data => (
               <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {PROJECTS.length > 0 && <Hr />}
+
+    {
+      PROJECTS.length > 0 && (
+        <section id="projects" class="pt-12 pb-6">
+          <div class="mb-4 flex items-center justify-between">
+            <h2 class="text-2xl font-semibold tracking-wide">Projects</h2>
+            <LinkButton href="/projects" class="text-sm">
+              View All
+              <IconArrowRight class="inline-block" />
+            </LinkButton>
+          </div>
+          <ul>
+            {PROJECTS.map(project => (
+              <li class="group my-5 rounded-xl border border-border/60 bg-card-background p-5 shadow-sm transition-all duration-200 ease-in-out hover:shadow-md hover:-translate-y-0.5 hover:border-accent/40">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="block w-full h-full no-underline"
+                >
+                  <h3 class="text-lg font-medium decoration-dashed group-hover:underline group-hover:text-accent transition-colors duration-200">
+                    {project.title}
+                  </h3>
+                  <p class="mt-2 text-sm text-foreground/75 leading-relaxed">
+                    {project.description}
+                  </p>
+                  {project.tags.length > 0 && (
+                    <div class="mt-3 flex flex-wrap gap-1.5">
+                      {project.tags.map(tag => (
+                        <span class="inline-block rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-medium text-accent/90 border border-accent/20">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </a>
+              </li>
             ))}
           </ul>
         </section>

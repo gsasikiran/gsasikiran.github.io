@@ -9,6 +9,16 @@ import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
 import { SITE } from "@/config";
 
+export const PROJECTS = [
+  {
+    title: "The Real-World Curriculum",
+    description:
+      "A practical education resource covering skills rarely taught in school — from emergency response and personal finance to digital safety, mental health, and career literacy. Structured from beginner to advanced.",
+    url: "https://gsasikiran.github.io/The-Real-World-Cirriculum/",
+    tags: ["Education", "Life Skills", "Open Source"],
+  },
+] as const;
+
 export const SOCIALS = [
   {
     name: "Google Scholar",

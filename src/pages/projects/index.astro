@@ -2,17 +2,8 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import { SITE } from "@/config";
-
-const projects = [
-  {
-    title: "The Real-World Curriculum",
-    description:
-      "A practical education resource covering skills rarely taught in school — from emergency response and personal finance to digital safety, mental health, and career literacy. Structured from beginner to advanced.",
-    url: "https://gsasikiran.github.io/The-Real-World-Cirriculum/",
-    tags: ["Education", "Life Skills", "Open Source"],
-  },
-];
+import { SITE, } from "@/config";
+import { PROJECTS as projects } from "@/constants";
 ---
 
 <Layout title={`Projects | ${SITE.title}`}>
