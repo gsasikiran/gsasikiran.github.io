@@ -1,0 +1,48 @@
+---
+author: Sasi Kiran Gaddipati
+pubDatetime: 2026-05-15T00:00:00Z
+title: "MLReplicate: Benchmarking Autonomous Research Systems for Machine Learning Reproducibility"
+slug: mlreplicate-benchmark
+featured: true
+draft: false
+tags:
+  - research
+  - AI
+  - LLM
+  - Benchmarking
+  - Machine Learning
+  - Reproducibility
+description:
+  MLReplicate is an end-to-end benchmark evaluating autonomous research systems on machine learning reproducibility, constructed from ICML 2025 outstanding papers and assessing 6 state-of-the-art AI research systems.
+---
+
+## Publication Details
+
+**Status:** Preprint on ArXiv
+
+**Authors:** Sasi Kiran Gaddipati, Diyana Muhammed, Farhana Keya, Gollam Rabby, Sören Auer
+
+**ArXiv:** [2605.16616](https://arxiv.org/abs/2605.16616)
+
+## Abstract
+
+Autonomous research systems capable of generating complete scientific manuscripts have advanced rapidly, yet robust and realistic evaluation frameworks have failed to keep pace. To bridge this gap, we introduce **MLReplicate**, an end-to-end benchmark evaluating autonomous research systems on machine learning reproducibility.
+
+The benchmark was constructed from ICML 2025 outstanding papers reformulated into standardized input specifications and evaluated across 6 state-of-the-art research systems: **AI Scientist-V1**, **AI Scientist-V2**, **Agent Laboratory**, **CycleResearcher**, **AI Researcher**, and **Tiny Scientist**, yielding 45 generated manuscripts, with 3 failed experiments.
+
+Outputs are assessed using a dual-protocol approach that combines automated conference-style review and structured expert human evaluation, while tracking computational cost, runtime, and the amount of required human intervention.
+
+## Key Findings
+
+- The automated conference-style review **accepted 10 out of 37 valid submissions**; an additional 8 were desk-rejected for failing to meet the minimum page threshold
+- Human reviewers consistently identified **methodological flaws, hallucinated experimental results, and reproducibility failures** across all systems
+- **59% of accepted automated reviews contained fabricated or unsupported claims**
+- Neither token budget nor computational cost predicts output quality: the **cheapest system outperforms the most resource-intensive system** in human evaluation, despite a 38-fold difference in input tokens
+- **Autonomous research workflow design matters more than the scale of compute**
+
+MLReplicate exposes a substantial gap between current autonomous research systems and genuine scientific rigor, and establishes a practical, extensible evaluation framework for systematic progress toward trustworthy AI-driven scientific discovery.
+
+## Access
+
+- [PDF on ArXiv](https://arxiv.org/pdf/2605.16616)
+- [Abstract](https://arxiv.org/abs/2605.16616)
